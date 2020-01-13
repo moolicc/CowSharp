@@ -98,6 +98,7 @@ namespace CowSharp
                 PrintState();
             }
         }
+
         public void DebugExecuteStep()
         {
             while (!_exit)
@@ -111,13 +112,13 @@ namespace CowSharp
 
         public void Execute()
         {
-            while(!_exit)
+            while (!_exit)
             {
                 ExecuteNext();
             }
         }
 
-        public void ExecuteNext()
+        private void ExecuteNext()
         {
             ExecuteInstruction(_program[_programPosition]);
         }
